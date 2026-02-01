@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public float sensX = 2f;
     public float sensY = 1f;
     public float yClamp;
+
     public float tilt = 30f;
 
     float xRot;
@@ -29,9 +30,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.forward * planeSpeed * Time.deltaTime);
         CameraMovement();
-
+        transform.Translate(Vector3.forward * planeSpeed * Time.deltaTime);
 
         Shooting();
     }
@@ -46,8 +46,18 @@ public class Movement : MonoBehaviour
         xRot -= inputY;
         xRot = Mathf.Clamp(xRot, -yClamp, yClamp);
 
-        transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         //orientation.rotation = Quaternion.Euler(0, yRot, 0);
+
+        float targetRoll = 0f;
+
+        if (inputX > 0f)
+            targetRoll = -tilt;
+        else if (inputX < 0)
+            targetRoll = tilt;
+
+        Quaternion targetRotation = Quaternion.Euler(xRot, yRot, targetRoll);
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
     }
 
     void Shooting()

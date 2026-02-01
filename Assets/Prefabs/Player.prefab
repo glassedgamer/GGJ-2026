@@ -465,12 +465,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a868ee443965af4bbb6008785e9f6c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 3720541275343004746}
   shootPoint: {fileID: 8236548189504363047}
   bullet: {fileID: 4661757523319827243, guid: ee81c7c7d48213e4f8fb9a686374fa51, type: 3}
   shoot: 323
   planeSpeed: 17
-  sensX: 0.7
+  sensX: 1
   sensY: -1
   yClamp: 30
   tilt: 0

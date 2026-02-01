@@ -10,6 +10,9 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         MainScreen();
+
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
     }
 
 
