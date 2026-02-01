@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 public class Movement : MonoBehaviour
 {
 
-    [SerializeField] Transform orientation;
+   // [SerializeField] Transform orientation;
     [SerializeField] Transform shootPoint;
 
     [SerializeField] GameObject bullet;
