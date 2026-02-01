@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870f116b268d51245a37eddca256918b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 20
-  maxBulletDistance: 20
+  bulletSpeed: 60
+  maxBulletDistance: 60
 --- !u!54 &-8546527283636520729
 Rigidbody:
   m_ObjectHideFlags: 0
