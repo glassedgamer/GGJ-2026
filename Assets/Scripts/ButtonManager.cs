@@ -28,6 +28,10 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene("Level03");
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
     public void Credits()
     {
         mainScreen.SetActive(false);

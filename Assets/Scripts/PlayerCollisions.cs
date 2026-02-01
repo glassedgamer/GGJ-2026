@@ -1,4 +1,3 @@
-using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
@@ -17,10 +16,5 @@ public class PlayerCollisions : MonoBehaviour
         {
             gameManager.BackToMain();
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
     }
 }
