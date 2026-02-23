@@ -551,6 +551,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9fcfcec9-8d19-4711-a406-95a04c3c0d56
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6527488745074575136}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: RollLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5f06578d-2668-4217-8199-cd85ea64ca55
+    m_ActionName: 'Player/Roll Left[/Keyboard/a]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6527488745074575136}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: RollRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c15b257e-cb0d-4cb8-8f93-c72db3cecb1a
+    m_ActionName: 'Player/Roll Right[/Keyboard/d]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -570,11 +602,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootPoint: {fileID: 8236548189504363047}
   bullet: {fileID: 4661757523319827243, guid: ee81c7c7d48213e4f8fb9a686374fa51, type: 3}
-  planeSpeed: 17
+  planeSpeed: 20
   mouseSens: 5
   stickSens: 80
   yClamp: 30
-  tilt: 0
+  tilt: 75
 --- !u!114 &1997329988884564635
 MonoBehaviour:
   m_ObjectHideFlags: 0

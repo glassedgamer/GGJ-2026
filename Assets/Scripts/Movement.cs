@@ -24,6 +24,9 @@ public class Movement : MonoBehaviour
 
     float xRot;
     float yRot;
+    float zRot;
+
+    float rollInput;
 
     bool usingGamepad;
 
@@ -53,16 +56,10 @@ public class Movement : MonoBehaviour
         xRot -= inputY;
         xRot = Mathf.Clamp(xRot, -yClamp, yClamp);
 
-        //orientation.rotation = Quaternion.Euler(0, yRot, 0);
+        //orientation.rotation = Quaternion.Euler(0, yRot, 0
 
-        float targetRoll = 0f;
-
-        if (inputX > 0f)
-            targetRoll = -tilt;
-        else if (inputX < 0)
-            targetRoll = tilt;
-
-        Quaternion targetRotation = Quaternion.Euler(xRot, yRot, targetRoll);
+        zRot = Mathf.Lerp(zRot, rollInput * tilt, Time.deltaTime * 5f);
+        Quaternion targetRotation = Quaternion.Euler(xRot, yRot, zRot);
 
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
     }
@@ -87,5 +84,17 @@ public class Movement : MonoBehaviour
     public void OnShoot(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         Instantiate(bullet, shootPoint.position, this.transform.rotation);
+    }
+
+    public void RollLeft(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (context.performed) rollInput = 1f;
+        if (context.canceled) rollInput = 0f;
+    }
+
+    public void RollRight(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (context.performed) rollInput = -1f;
+        if (context.canceled) rollInput = 0f;
     }
 }
