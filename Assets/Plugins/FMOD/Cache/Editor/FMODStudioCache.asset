@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/FMod/Desktop/Something IDK.bank
   Name: Something IDK
   StudioPath: bank:/Something IDK
-  lastModified: 639076156860125469
+  lastModified: 639076497540000000
   FileSizes: []
   Exists: 1
 --- !u!114 &-3258478082922024856
@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: Assets/FMod/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076156825662752
+  lastModified: 639076497540000000
   FileSizes:
   - Name: 
     Value: 826
@@ -62,7 +62,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -3258478082922024856}
   cacheVersion: 131858
-  cacheTime: 639076156860125469
+  cacheTime: 639076497540000000
   SerializableEventsDict:
   - key: event:/New Event
     index: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   Path: Assets/FMod/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076156825377923
+  lastModified: 639076497540000000
   FileSizes: []
   Exists: 1
 --- !u!114 &8055169505710898010
