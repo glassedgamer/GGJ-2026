@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Level03.bank
   Name: Level03
   StudioPath: bank:/Level03
-  lastModified: 639077072160000000
+  lastModified: 639076970931829996
   FileSizes: []
   Exists: 1
 --- !u!114 &-4449938875118749802
@@ -71,7 +71,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639077072160000000
+  lastModified: 639076970931709375
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -98,7 +98,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2184714099506397129}
   cacheVersion: 131858
-  cacheTime: 639077072160000000
+  cacheTime: 639076970931829996
   SerializableEventsDict:
   - key: event:/Music/Level03 Music
     index: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639077072160000000
+  lastModified: 639076970931734517
   FileSizes:
   - Name: 
     Value: 830

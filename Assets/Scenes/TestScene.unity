@@ -2109,6 +2109,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6527488745074575136, guid: 5d5c4025716495e4eaa577d159057bf5, type: 3}
+      propertyPath: tilt
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8675781588400812036, guid: 5d5c4025716495e4eaa577d159057bf5, type: 3}
     m_RemovedGameObjects: []

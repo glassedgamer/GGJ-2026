@@ -51,17 +51,25 @@ public class Movement : MonoBehaviour
         float inputX = lookInput.x * sens * Time.deltaTime;
         float inputY = lookInput.y * -sens * Time.deltaTime;
 
+        // X and Y rotation
+        transform.Rotate(Vector3.up, inputX, Space.Self);
+        transform.Rotate(Vector3.right, -inputY, Space.Self);
+
+        zRot = tilt * rollInput;
+        zRot = Mathf.Clamp(zRot, -tilt, tilt);
+        //transform.Rotate(Vector3.forward, zRot, Space.Self);
+
+
+
+        /*
         yRot += inputX;
 
         xRot -= inputY;
         xRot = Mathf.Clamp(xRot, -yClamp, yClamp);
 
-        //orientation.rotation = Quaternion.Euler(0, yRot, 0
 
-        zRot = Mathf.Lerp(zRot, rollInput * tilt, Time.deltaTime * 5f);
-        Quaternion targetRotation = Quaternion.Euler(xRot, yRot, zRot);
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
+        transform.rotation = Quaternion.Euler(xRot, yRot, zRot);
+        */
     }
 
     /*
@@ -88,13 +96,17 @@ public class Movement : MonoBehaviour
 
     public void RollLeft(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        if (context.performed) rollInput = 1f;
-        if (context.canceled) rollInput = 0f;
+        if (context.performed) 
+            rollInput = 1f;
+        if (context.canceled) 
+            rollInput = 0f;
     }
 
     public void RollRight(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
-        if (context.performed) rollInput = -1f;
-        if (context.canceled) rollInput = 0f;
+        if (context.performed) 
+            rollInput = -1f;
+        if (context.canceled) 
+            rollInput = 0f;
     }
 }
