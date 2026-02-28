@@ -6,11 +6,12 @@ public class ButtonManager : MonoBehaviour
 
     public GameObject mainScreen;
     public GameObject credits;
-
+    public GameObject levels; 
+     
     private void Start()
     {
         MainScreen();
-
+        levels.SetActive(false);
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
     }
@@ -41,5 +42,13 @@ public class ButtonManager : MonoBehaviour
     {
         mainScreen.SetActive(true);
         credits.SetActive(false);
+    }
+
+    //Mason's Changes -----------
+
+    public void Enlist()
+    {
+        mainScreen.SetActive(false);
+        levels.SetActive(true);
     }
 }
