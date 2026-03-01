@@ -621,7 +621,7 @@ MonoBehaviour:
   mouseSens: 5
   stickSens: 80
   yClamp: 30
-  tilt: 75
+  tilt: 65
 --- !u!114 &1997329988884564635
 MonoBehaviour:
   m_ObjectHideFlags: 0

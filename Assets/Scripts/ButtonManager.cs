@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -8,34 +9,42 @@ public class ButtonManager : MonoBehaviour
     public GameObject credits;
     public GameObject levels;
     public GameObject loading;
+
+    public bool continueToLevel = false;
+    public bool load = false;
+
+    string levelToLoad;
      
     private void Start()
     {
+        continueToLevel = false;
+        load = false;
+
         MainScreen();
         levels.SetActive(false);
         loading.SetActive(false);
+
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
     }
 
+    //Stuff to do when UI buttons are pressed
 
     public void Level01()
     {
+        levelToLoad = "Level01";
         Loading();
-        //I need you to put "spacebar" and A to continue to the next scene for this. Not familar with the system dont wanna fuck it up
-        //SceneManager.LoadScene("Level01");
+
     }
     public void Level02()
     {
+        levelToLoad = "Level02";
         Loading();
-        //I need you to put "spacebar" and A to continue to the next scene for this. Not familar with the system dont wanna fuck it up
-        SceneManager.LoadScene("Level02");
     }
     public void Level03()
     {
+        levelToLoad = "Level03";
         Loading();
-        //I need you to put "spacebar" and A to continue to the next scene for this. Not familar with the system dont wanna fuck it up
-        SceneManager.LoadScene("Level03");
     }
     public void Quit()
     {
@@ -48,13 +57,12 @@ public class ButtonManager : MonoBehaviour
     }
     public void MainScreen()
     {
+        load = false; 
+
         mainScreen.SetActive(true);
         credits.SetActive(false);
         levels.SetActive(false);
     }
-
-    //Mason's Changes -----------
-
     public void Enlist()
     {
         mainScreen.SetActive(false);
@@ -63,9 +71,24 @@ public class ButtonManager : MonoBehaviour
 
     public void Loading()
     {
+        load = true;
+
         loading.SetActive(true);
         mainScreen.SetActive(false);
         credits.SetActive(false);
         levels.SetActive(false);
     }
+
+    //Input Actions
+    public void OnContinue(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        if (context.performed && load)
+            SceneManager.LoadScene(levelToLoad);
+    }
+
+    public void test(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        print("what's up");
+    }
+
 }

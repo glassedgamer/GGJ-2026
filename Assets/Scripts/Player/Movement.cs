@@ -55,9 +55,9 @@ public class Movement : MonoBehaviour
         transform.Rotate(Vector3.up, inputX, Space.Self);
         transform.Rotate(Vector3.right, -inputY, Space.Self);
 
-        zRot = tilt * rollInput;
-        zRot = Mathf.Clamp(zRot, -tilt, tilt);
-        //transform.Rotate(Vector3.forward, zRot, Space.Self);
+        zRot = tilt * rollInput * Time.deltaTime;
+        //zRot = Mathf.Clamp(zRot, -tilt, tilt);
+        transform.Rotate(Vector3.forward, zRot, Space.Self);
 
 
 
