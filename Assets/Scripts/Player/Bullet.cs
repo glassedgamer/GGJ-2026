@@ -17,6 +17,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
+        if (player == null || gameManager == null)
+            Destroy(gameObject);
+
         transform.Translate(Vector3.forward * Time.deltaTime * bulletSpeed);
 
         if(Vector3.Distance(transform.position, player.transform.position) > maxBulletDistance)

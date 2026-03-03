@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
         if(instance != null)
         {
             Debug.LogError("More than one audio manager in the scene dummy");
+            Destroy(this);
         }
 
         instance = this;
@@ -20,7 +21,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeMusic(FMODEvents.instance.music);
+        //InitializeMusic(FMODEvents.instance.music);
     }
 
     public void PlayerOneShot(EventReference sound, Vector3 worldSpace)
@@ -34,9 +35,15 @@ public class AudioManager : MonoBehaviour
         return eventInst;
     }
 
-    void InitializeMusic(EventReference musicEventRef)
+    public void InitializeMusic(EventReference musicEventRef)
     {
         musicEventInstance = CreateInstance(musicEventRef);
         musicEventInstance.start();
+    }
+
+    public void StopMusic(EventReference musicEventRef)
+    {
+        musicEventInstance = CreateInstance(musicEventRef);
+        musicEventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

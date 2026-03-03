@@ -552,7 +552,9 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Level01
   - Level03
+  - Main Menu
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

@@ -17,6 +17,7 @@ public class ButtonManager : MonoBehaviour
      
     private void Start()
     {
+        AudioManager.instance.StopMusic(FMODEvents.instance.music);
         continueToLevel = false;
         load = false;
 
@@ -26,6 +27,8 @@ public class ButtonManager : MonoBehaviour
 
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
+
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.music);
     }
 
     //Stuff to do when UI buttons are pressed

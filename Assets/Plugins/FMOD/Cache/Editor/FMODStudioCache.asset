@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8467985570652720527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Main Menu.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Main Menu.bank
+  Name: Main Menu
+  StudioPath: bank:/Main Menu
+  lastModified: 639080824171140373
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7942220719202932329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +74,60 @@ MonoBehaviour:
   - Name: 
     Value: 826
   Exists: 1
+--- !u!114 &-2709779360843510136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Main Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Main Menu Music
+  Guid:
+    Data1: -661899270
+    Data2: 1153887199
+    Data3: -430693753
+    Data4: 1939924045
+  Banks:
+  - {fileID: -8467985570652720527}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7384
+--- !u!114 &-1693357795212885442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Level01 Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Level01 Music
+  Guid:
+    Data1: 104874326
+    Data2: 1150182468
+    Data3: -807325311
+    Data4: 58391333
+  Banks:
+  - {fileID: 2490821510046159572}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 57986
 --- !u!114 &-299587799524470533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +143,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639076970931709375
+  lastModified: 639080825679991509
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -90,18 +162,26 @@ MonoBehaviour:
   - {fileID: 2184714099506397129}
   - {fileID: -299587799524470533}
   - {fileID: -7942220719202932329}
+  - {fileID: -8467985570652720527}
+  - {fileID: 2490821510046159572}
   EditorEvents:
   - {fileID: 7620355155030483048}
+  - {fileID: -2709779360843510136}
+  - {fileID: -1693357795212885442}
   EditorParameters: []
   MasterBanks:
   - {fileID: -299587799524470533}
   StringsBanks:
   - {fileID: 2184714099506397129}
   cacheVersion: 131858
-  cacheTime: 639080820751945911
+  cacheTime: 639080826046099466
   SerializableEventsDict:
   - key: event:/Music/Level03 Music
     index: 0
+  - key: event:/Music/Main Menu Music
+    index: 1
+  - key: event:/Music/Level01 Music
+    index: 2
 --- !u!114 &2184714099506397129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,10 +197,28 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639076970931734517
+  lastModified: 639080825680016763
   FileSizes:
   - Name: 
-    Value: 830
+    Value: 1032
+  Exists: 1
+--- !u!114 &2490821510046159572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Level01.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Desktop/Level01.bank
+  Name: Level01
+  StudioPath: bank:/Level01
+  lastModified: 639080826046099466
+  FileSizes: []
   Exists: 1
 --- !u!114 &3008262670277272415
 MonoBehaviour:

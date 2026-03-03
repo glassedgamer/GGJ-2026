@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        AudioManager.instance.StopMusic(FMODEvents.instance.music);
         levelGoal.text = $"There are {enemyKillGoal - enemyKillCounter} enemies left";
+
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.music);
     }
 
     private void Update()
