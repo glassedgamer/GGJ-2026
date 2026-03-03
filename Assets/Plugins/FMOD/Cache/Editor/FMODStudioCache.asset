@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Level03.bank
   Name: Level03
   StudioPath: bank:/Level03
-  lastModified: 639076970931829996
+  lastModified: 639080820751945911
   FileSizes: []
   Exists: 1
 --- !u!114 &-4449938875118749802
@@ -98,7 +98,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2184714099506397129}
   cacheVersion: 131858
-  cacheTime: 639076970931829996
+  cacheTime: 639080820751945911
   SerializableEventsDict:
   - key: event:/Music/Level03 Music
     index: 0
@@ -160,13 +160,13 @@ MonoBehaviour:
     Data4: -1559470092
   Banks:
   - {fileID: -7942220719202932329}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 12800
 --- !u!114 &8055169505710898010
 MonoBehaviour:
   m_ObjectHideFlags: 0
